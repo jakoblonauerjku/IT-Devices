@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AR mit zwei Markern</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <a-scene embedded arjs="debugUIEnabled: false; sourceType: webcam;">
+
+      <a-marker preset="hiro">
+        <a-box position="0 0.5 0" width="1" height="1" depth="1" material="color: red;"></a-box>
+      </a-marker>
+
+      <a-marker preset="kanji">
+        <a-sphere position="0 0.5 0" radius="0.5" material="color: green;"></a-sphere>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
